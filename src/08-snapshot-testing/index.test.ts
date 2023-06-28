@@ -7,13 +7,13 @@ const listFromMockedArrayOfNumbers = {
 };
 
 describe('generateLinkedList', () => {
+  const list = generateLinkedList<number>(mockArrayOfNumbers);
+
   test('should generate linked list from values 1', () => {
-    const list = generateLinkedList<number>(mockArrayOfNumbers);
     expect(list).toStrictEqual(listFromMockedArrayOfNumbers);
   });
 
   test('should generate linked list from values 2', () => {
-    const list = generateLinkedList<number>(mockArrayOfNumbers);
     expect(list).toMatchSnapshot(listFromMockedArrayOfNumbers);
   });
 });
